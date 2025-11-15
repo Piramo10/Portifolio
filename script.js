@@ -37,9 +37,17 @@ const navLinks = document.querySelector(".nav-links");
 const menuToggle = document.createElement("button");
 menuToggle.innerHTML = "☰";
 menuToggle.classList.add("menu-toggle");
+menuToggle.setAttribute("aria-label", "Toggle navigation");
 
 document.querySelector(".navbar").prepend(menuToggle);
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
+});
+
+// Fechar menu ao clicar em um link (mobile)
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("active");
+  });
 });
