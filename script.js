@@ -34,7 +34,7 @@ cards.forEach((card) => {
 
 // ===== Menu responsivo (hamburger) =====
 const navLinks = document.querySelector(".nav-links");
-const menuToggle = document.createElement("button");
+
 menuToggle.innerHTML = "☰";
 menuToggle.classList.add("menu-toggle");
 menuToggle.setAttribute("aria-label", "Toggle navigation");
