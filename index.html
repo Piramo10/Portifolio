@@ -9,34 +9,43 @@
   </head>
   <body>
     <!-- Navegação -->
-    <header>
-      <nav class="navbar container">
-        <h1 class="logo">Marcelo Piramo</h1>
-        <ul class="nav-links">
-          <li><a href="#projetos">Projetos</a></li>
-          <li><a href="#sobre">Sobre Mim</a></li>
-          <li><a href="#cursos">Cursos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </header>
+<header>
+  <nav class="navbar container">
+    <h1 class="logo" id="logo">Marcelo Piramo</h1>
+    <div class="nav-controls">
+      <ul class="nav-links">
+        <li><a href="#projetos" id="nav-projetos">Projetos</a></li>
+        <li><a href="#sobre" id="nav-sobre">Sobre Mim</a></li>
+        <li><a href="#cursos" id="nav-cursos">Cursos</a></li>
+        <li><a href="#contato" id="nav-contato">Contato</a></li>
+        <li><a href="MARCELO_PIRAMOMOTA_currículo.pdf" download="Marcelo-Piramo-Curriculo.pdf" class="btn-curriculo" id="btn-curriculo">Currículo</a></li>
+      </ul>
+      <select id="language-selector" class="language-selector">
+        <option value="pt">PT</option>
+        <option value="es">ES</option>
+        <option value="en">EN</option>
+      </select>
+    </div>
+  </nav>
+</header>
+
 
     <!-- Hero -->
     <section class="hero">
       <div class="container hero-content">
-        <h2>Olá, eu sou <span>Marcelo Piramo</span></h2>
-        <p>Desenvolvedor Full-stack | Estudante de Engenharia de Software</p>
+        <h2 id="hero-title">Olá, eu sou <span>Marcelo Piramo</span></h2>
+        <p id="hero-subtitle">Desenvolvedor Full-stack | Estudante de Engenharia de Software</p>
       </div>
     </section>
 
     <!-- Projetos -->
     <section id="projetos" class="projetos">
       <div class="container">
-        <h2>Projetos</h2>
+        <h2 id="projetos-title">Projetos</h2>
         <div class="cards">
           <article class="card">
-            <h3>Aplicação de Clima</h3>
-            <p>
+            <h3 id="projeto1-title">Aplicação de Clima</h3>
+            <p id="projeto1-desc">
               Aplicação web que permite consultar a previsão do tempo de
               qualquer cidade. Interface simples e intuitiva, com busca dinâmica
               e dados atualizados.
@@ -45,13 +54,12 @@
               href="https://piramo10.github.io/Aplica-o-de-Clima/"
               target="_blank"
               class="btn"
-              >Ver Projeto</a
-            >
+              id="projeto1-btn">Ver Projeto</a>
           </article>
 
           <article class="card">
-            <h3>Gerador de Senhas</h3>
-            <p>
+            <h3 id="projeto2-title">Gerador de Senhas</h3>
+            <p id="projeto2-desc">
               Gerador de senhas seguro, desenvolvido em HTML, CSS e JS. O
               usuário pode personalizar o tamanho e incluir letras, números e
               símbolos.
@@ -60,13 +68,12 @@
               href="https://piramo10.github.io/Gerador-de-Senha/"
               target="_blank"
               class="btn"
-              >Ver Projeto</a
-            >
+              id="projeto2-btn">Ver Projeto</a>
           </article>
 
           <article class="card">
-            <h3>Agenda Alviverde</h3>
-            <p>
+            <h3 id="projeto3-title">Agenda Alviverde</h3>
+            <p id="projeto3-desc">
               Uma agenda simples para organizar compromissos e tarefas. Permite
               adicionar, editar e excluir eventos, com interface amigável e
               responsiva.
@@ -75,30 +82,28 @@
               href="https://piramo10.github.io/agenda-alviverde/"
               target="_blank"
               class="btn"
-              >Ver Projeto</a
-            >
+              id="projeto3-btn">Ver Projeto</a>
           </article>
 
-          <!-- Novo projeto de Registro de Humor -->
           <article class="card">
-            <h3>Registro de Humor</h3>
-            <p>
+            <h3 id="projeto4-title">Registro de Humor</h3>
+            <p id="projeto4-desc">
               Aplicação full-stack para registro e acompanhamento do bem-estar emocional.
               Backend com Node.js/Express e frontend com JavaScript vanilla.
             </p>
-            <a href="https://registro-de-humor-1.onrender.com" target="_blank" class="btn">
+            <a href="https://registro-de-humor-1.onrender.com" target="_blank" class="btn" id="projeto4-btn">
               Ver Projeto
             </a>
           </article>
+          
           <article class="card">
-            <h3>Gerenciador de Finanças</h3>
-            <p>Estou trabalhando neste projeto. Nele o Objetivo é ajudar a manter o controle das finanças pessoais.
+            <h3 id="projeto5-title">Gerenciador de Finanças</h3>
+            <p id="projeto5-desc">Estou trabalhando neste projeto. Nele o Objetivo é ajudar a manter o controle das finanças pessoais.
               O usuário poderá cadastrar suas receitas e despesas, categorizá-las e visualizar gráficos de fluxo de caixa e saldo mensal, e tudo isso com uma integração de Inteligencia Artificial para ajudar o usuario. O backend será desenvolvido com Node.js e Express, utilizando um banco de dados MongoDB para armazenamento dos dados financeiros. O frontend será construído com JavaScript vanilla, proporcionando uma interface simples e intuitiva para facilitar o gerenciamento das finanças pessoais.
-              </p>
-              <p class="small">
-                Em breve disponível!
             </p>
-
+            <p class="small" id="projeto5-soon">
+              Em breve disponível!
+            </p>
           </article>
         </div>
       </div>
@@ -107,71 +112,76 @@
     <!-- Sobre mim -->
     <section id="sobre" class="sobre">
       <div class="container">
-        <h2>Sobre Mim</h2>
-        <p>
+        <h2 id="sobre-title">Sobre Mim</h2>
+        <p id="sobre-desc">
           Sou estudante de Engenharia de Software, apaixonado por tecnologia e inovação, com foco em transformar ideias em sistemas eficientes, seguros e escaláveis. Servi o Exército Brasileiro por um ano, experiência que fortaleceu minha disciplina, senso de responsabilidade e trabalho em equipe. Atuei também como auxiliar de backoffice na área de segurança documental, desenvolvendo atenção aos detalhes e comprometimento com processos críticos. Sou uma pessoa educada, inicialmente reservada, mas com boa capacidade de posicionamento e comunicação quando necessário. Atualmente, estudo linguagens modernas e boas práticas de desenvolvimento full-stack, sempre em busca de evolução contínua.
         </p>
       </div>
     </section>
 
-    <!-- Cursos e Certificados com download -->
+    <!-- Cursos e Certificados -->
     <section id="cursos" class="cursos">
       <div class="container">
-        <h2>Cursos e Certificados</h2>
-        <p style="text-align:center; max-width:900px; margin:0 auto 1.5rem;">
+        <h2 id="cursos-title">Cursos e Certificados</h2>
+        <p id="cursos-subtitle" style="text-align:center; max-width:900px; margin:0 auto 1.5rem;">
           Clique em "Baixar Certificado" para salvar o PDF.
         </p>
 
         <div class="cards">
           <article class="card">
-            <h3>Crie um site simples usando HTML, CSS e JavaScript</h3>
-            <p>Curso autoinstrucional (2 horas). Concluído em <strong>09/03/2025</strong>.</p>
-            <p class="small">Código: <code>A2CCC510-93E1-4C9F-9B09-4375E3EC35C1</code></p>
-            <a href="./Frontend.pdf" download="Frontend.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso1-title">Crie um site simples usando HTML, CSS e JavaScript</h3>
+            <p id="curso1-desc">Curso autoinstrucional (2 horas). Concluído em <strong>09/03/2025</strong>.</p>
+            <p class="small" id="curso1-code">Código: <code>A2CCC510-93E1-4C9F-9B09-4375E3EC35C1</code></p>
+            <a href="./Frontend.pdf" download="Frontend.pdf" class="btn" id="curso1-btn">Baixar Certificado</a>
           </article>
 
           <article class="card">
-            <h3>Projetos de Sistemas de TI</h3>
-            <p>Curso autoinstrucional (15 horas). Concluído em <strong>15/03/2025</strong>.</p>
-            <p class="small">Código: <code>6FC0AA1A-76D2-405C-8E3C-064B3572F858</code></p>
-            <a href="./Projetos-de-Sistemas-TI.pdf" download="Projetos-de-Sistemas-TI.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso2-title">Projetos de Sistemas de TI</h3>
+            <p id="curso2-desc">Curso autoinstrucional (15 horas). Concluído em <strong>15/03/2025</strong>.</p>
+            <p class="small" id="curso2-code">Código: <code>6FC0AA1A-76D2-405C-8E3C-064B3572F858</code></p>
+            <a href="./Projetos-de-Sistemas-TI.pdf" download="Projetos-de-Sistemas-TI.pdf" class="btn" id="curso2-btn">Baixar Certificado</a>
           </article>
 
           <article class="card">
-            <h3>Fundamentos de TI: Hardware e Software</h3>
-            <p>Curso autoinstrucional (7 horas). Concluído em <strong>06/05/2025</strong>.</p>
-            <p class="small">Código: <code>0681D691-C9F7-458A-B345-275D1E88C307</code></p>
-            <a href="./Fundamentos-de-TI.pdf" download="Fundamentos-de-TI.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso3-title">Fundamentos de TI: Hardware e Software</h3>
+            <p id="curso3-desc">Curso autoinstrucional (7 horas). Concluído em <strong>06/05/2025</strong>.</p>
+            <p class="small" id="curso3-code">Código: <code>0681D691-C9F7-458A-B345-275D1E88C307</code></p>
+            <a href="./Fundamentos-de-TI.pdf" download="Fundamentos-de-TI.pdf" class="btn" id="curso3-btn">Baixar Certificado</a>
           </article>
+          
           <article class="card">
-            <h3>Análise de Dados PowerBI</h3>
-            <p>Curso autoinstrucional (4 horas). Concluído em <strong>26/01/2026</strong>.</p>
-            <p class="small">Código: <code>3A4B8C9D-1E2F-4A5B-6C7D-8E9F0A1B2C3D</code></p>
-            <a href="Análise de dados PowerBI.pdf" download="Analise-de-Dados-PowerBI.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso4-title">Análise de Dados PowerBI</h3>
+            <p id="curso4-desc">Curso autoinstrucional (4 horas). Concluído em <strong>26/01/2026</strong>.</p>
+            <p class="small" id="curso4-code">Código: <code>3A4B8C9D-1E2F-4A5B-6C7D-8E9F0A1B2C3D</code></p>
+            <a href="Análise de dados PowerBI.pdf" download="Analise-de-Dados-PowerBI.pdf" class="btn" id="curso4-btn">Baixar Certificado</a>
           </article>
+          
           <article class="card">
-            <h3>Programação Orientada a Objetos (POO)</h3>
-            <p>Curso autoinstrucional (5 horas). Concluído em <strong>05/02/2026</strong>.</p>
-            <p class="small">Código: <code>4B5C9D0E-2F3A-4B6C-7D8E-9F0A1B2C3D4E</code></p>
-            <a href="Programação POO.pdf" download="POO.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso5-title">Programação Orientada a Objetos (POO)</h3>
+            <p id="curso5-desc">Curso autoinstrucional (5 horas). Concluído em <strong>05/02/2026</strong>.</p>
+            <p class="small" id="curso5-code">Código: <code>4B5C9D0E-2F3A-4B6C-7D8E-9F0A1B2C3D4E</code></p>
+            <a href="Programação POO.pdf" download="POO.pdf" class="btn" id="curso5-btn">Baixar Certificado</a>
           </article>
+          
           <article class="card">
-            <h3>Word Avançado</h3>
-            <p>Curso autoinstrucional (8 horas). Concluído em <strong>28/02/2026</strong>.</p>
-            <p class="small">Código: <code>5C6D0E1F-3A4B-5C7D-8E9F-0A1B2C3D4E5F</code></p>
-            <a href="Word_Avançado.pdf" download="Word-Avancado.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso6-title">Word Avançado</h3>
+            <p id="curso6-desc">Curso autoinstrucional (8 horas). Concluído em <strong>28/02/2026</strong>.</p>
+            <p class="small" id="curso6-code">Código: <code>5C6D0E1F-3A4B-5C7D-8E9F-0A1B2C3D4E5F</code></p>
+            <a href="Word_Avançado.pdf" download="Word-Avancado.pdf" class="btn" id="curso6-btn">Baixar Certificado</a>
           </article>
+          
           <article class="card">
-            <h3>Excel Avançado</h3>
-            <p>Curso autoinstrucional (30 horas). Concluído em <strong>08/03/2026</strong>.</p>
-            <p class="small">Código: <code>6D7E0F1A-4B5C-6D8E-9F0A-1B2C3D4E5F6A</code></p>
-            <a href="Excel_Avançado.pdf" download="Excel-Avancado.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso7-title">Excel Avançado</h3>
+            <p id="curso7-desc">Curso autoinstrucional (30 horas). Concluído em <strong>08/03/2026</strong>.</p>
+            <p class="small" id="curso7-code">Código: <code>6D7E0F1A-4B5C-6D8E-9F0A-1B2C3D4E5F6A</code></p>
+            <a href="Excel_Avançado.pdf" download="Excel-Avancado.pdf" class="btn" id="curso7-btn">Baixar Certificado</a>
           </article>
+          
           <article class="card">
-            <h3>Adiministrando Banco de Dados</h3>
-            <p>Curso autoinstrucional (15 horas). Concluído em <strong>08/03/2026</strong>.</p>
-            <p class="small">Código: <code>7E8F1A2B-5C6D-7E9F-0A1B-2C3D4E5F6A7B</code></p>
-            <a href="Adiministrando_Banco_de_dados.pdf" download="Adiministrando_Banco_de_Dados.pdf" class="btn">Baixar Certificado</a>
+            <h3 id="curso8-title">Adiministrando Banco de Dados</h3>
+            <p id="curso8-desc">Curso autoinstrucional (15 horas). Concluído em <strong>08/03/2026</strong>.</p>
+            <p class="small" id="curso8-code">Código: <code>7E8F1A2B-5C6D-7E9F-0A1B-2C3D4E5F6A7B</code></p>
+            <a href="Adiministrando_Banco_de_dados.pdf" download="Adiministrando_Banco_de_Dados.pdf" class="btn" id="curso8-btn">Baixar Certificado</a>
           </article>
         </div>
       </div>
@@ -180,26 +190,26 @@
     <!-- Contato -->
     <section id="contato" class="contato">
       <div class="container">
-        <h2>Contato</h2>
-        <p class="contato-text">
+        <h2 id="contato-title">Contato</h2>
+        <p class="contato-text" id="contato-desc">
           Gostou do meu trabalho? Entre em contato comigo para colaborações ou
           oportunidades.
         </p>
         <ul>
-          <li>
+          <li id="email-label">
             Email: <a href="mailto:marcelopiramo10@gmail.com">marcelopiramo10@gmail.com</a>
           </li>
-          <li>
+          <li id="github-label">
             GitHub:
             <a href="https://github.com/piramo10" target="_blank"
               >github.com/piramo10</a
             >
           </li>
-          <li>
+          <li id="instagram-label">
             Instagram: <a href="https://www.instagram.com/piramo.dev" target="_blank"
               >@piramo.dev</a
           </li>
-          <li>Telefone: 55+ (11) 98428-7152</li>
+          <li id="telefone-label">Telefone: 55+ (11) 98428-7152</li>
         </ul>
       </div>
     </section>
@@ -207,7 +217,7 @@
     <!-- Rodapé -->
     <footer>
       <div class="container">
-        <p>&copy; 2026 Marcelo Piramo | Todos os direitos reservados.</p>
+        <p id="footer-text">&copy; 2026 Marcelo Piramo | Todos os direitos reservados.</p>
       </div>
     </footer>
   </body>

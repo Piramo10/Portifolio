@@ -50,6 +50,12 @@ header {
   font-weight: 700;
 }
 
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .nav-links {
   display: flex;
   list-style: none;
@@ -65,6 +71,54 @@ header {
 
 .nav-links a:hover {
   color: var(--accent);
+}
+
+/* Botão de Currículo */
+.btn-curriculo {
+  background-color: var(--success);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--success);
+}
+
+.btn-curriculo:hover {
+  background-color: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4);
+}
+
+/* Seletor de Idioma */
+.language-selector {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.language-selector:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: white;
+}
+
+.language-selector:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.language-selector option {
+  background: var(--dark);
+  color: white;
 }
 
 /* Hero Section */
@@ -122,8 +176,12 @@ h2 {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border-left: 4px solid var(--primary);
+  opacity: 1; /* Garantir visibilidade */
+  transform: translateY(0); /* Garantir posição correta */
 }
 
 .card:hover {
@@ -141,13 +199,13 @@ h2 {
 }
 
 .card h3 {
-  color: var(--primary);
+  color: var(--dark); /* Cor escura visível */
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .card p {
-  color: var(--gray);
+  color: var(--gray); /* Cor cinza visível */
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -173,7 +231,9 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
   font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: none;
   cursor: pointer;
 }
@@ -237,6 +297,53 @@ footer {
   padding: 2rem 0;
 }
 
+/* CORREÇÕES PARA VISIBILIDADE DOS TEXTOS */
+/* Títulos de projetos */
+[id^="projeto"][id$="-title"] {
+  color: var(--dark) !important;
+}
+
+/* Descrições de projetos */
+[id^="projeto"][id$="-desc"] {
+  color: var(--gray) !important;
+}
+
+/* Textos "Em breve" de projetos */
+[id^="projeto"][id$="-soon"] {
+  color: var(--gray) !important;
+}
+
+/* Botões de projetos */
+[id^="projeto"][id$="-btn"] {
+  color: white !important;
+}
+
+/* Títulos de cursos */
+[id^="curso"][id$="-title"] {
+  color: var(--dark) !important;
+}
+
+/* Descrições de cursos */
+[id^="curso"][id$="-desc"] {
+  color: var(--gray) !important;
+}
+
+/* Códigos de cursos */
+[id^="curso"][id$="-code"] {
+  color: var(--gray) !important;
+}
+
+/* Botões de cursos */
+[id^="curso"][id$="-btn"] {
+  color: white !important;
+}
+
+/* Garantir que cards estejam sempre visíveis */
+.card.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .navbar {
@@ -244,8 +351,17 @@ footer {
     gap: 1rem;
   }
 
+  .nav-controls {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
   .nav-links {
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .hero-content h2 {
@@ -263,13 +379,19 @@ footer {
   .cards {
     grid-template-columns: 1fr;
   }
+
+  .language-selector {
+    margin-top: 10px;
+  }
 }
 
 /* Animações */
 .card {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  opacity: 1; /* Começar visível */
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
 }
 
 .card.show {
